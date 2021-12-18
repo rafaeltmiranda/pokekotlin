@@ -20,12 +20,12 @@ class EndpointTest {
         // call the mock API to get a list of resource endpoints
 
         val json = httpClient
-                .newCall(Request.Builder()
-                        .get()
-                        .url(MockServer.url)
-                        .build())
-                .execute()
-                .body()!!
+            .newCall(Request.Builder()
+                .get()
+                .url(MockServer.url)
+                .build())
+            .execute()
+            .body!!
                 .string()
 
         // parse the expected resources using the list
